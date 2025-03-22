@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Products on ACE3</title><link>https://example.org/products/</link><description>Recent content in Products on ACE3</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/products/index.xml" rel="self" type="application/rss+xml"/><item><title>ACE3Cloud</title><link>https://example.org/products/ace3cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/products/ace3cloud/</guid><description>&lt;h1 id="ace3cloud">ACE3Cloud&lt;/h1>
+&lt;h2 id="ace3cloud-production-ready">ACE3Cloud, Production Ready&lt;/h2>
+&lt;p>Cloud with Low Cost&lt;/p>
+&lt;p>Teaming up with excellent open-source foundation models.&lt;/p></description></item><item><title>ACE3Diff</title><link>https://example.org/products/ace3diff/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/products/ace3diff/</guid><description>&lt;h1 id="ace3diff">ACE3Diff&lt;/h1>
+&lt;h2 id="ace3diff-high-performance">ACE3Diff, High-performance&lt;/h2>
+&lt;p>Image Generation Engine&lt;/p>
+&lt;p>Empower your image generation application with high performance and low cost.&lt;/p></description></item><item><title>ACE3LLM</title><link>https://example.org/products/ace3llm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/products/ace3llm/</guid><description>&lt;h1 id="ace3llm">ACE3LLM&lt;/h1>
+&lt;h2 id="ace3llm-high-performance">ACE3LLM, High-performance&lt;/h2>
+&lt;p>LLM Inference Engine&lt;/p>
+&lt;p>Empower your LLM inference application with high performance and low cost.&lt;/p></description></item></channel></rss>
