@@ -1,0 +1,108 @@
+{
+  "title": "ACE3 Documentation",
+  "description": "Comprehensive documentation for ACE3 AI acceleration platform",
+  "default_doc": "main",
+  "sections": [
+    {
+      "id": "main",
+      "title": "Overview",
+      "file": "main.md",
+      "icon": "📋"
+    },
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "file": "getting-started.md",
+      "icon": "🚀"
+    },
+    {
+      "id": "api-reference",
+      "title": "API Reference",
+      "file": "api-reference.md",
+      "icon": "📚"
+    },
+    {
+      "id": "inference",
+      "title": "Inference Acceleration",
+      "file": "inference.md",
+      "icon": "⚡"
+    },
+    {
+      "id": "training",
+      "title": "Training Acceleration",
+      "file": "training.md",
+      "icon": "🎯"
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutorials",
+      "file": "tutorials.md",
+      "icon": "📖"
+    },
+    {
+      "id": "sdk",
+      "title": "SDK References",
+      "file": "sdk.md",
+      "icon": "🔧"
+    }
+  ],
+  "sidebar": [
+    {
+      "title": "Getting Started",
+      "collapsed": false,
+      "items": [
+        { "title": "Introduction", "anchor": "#introduction", "doc": "main" },
+        { "title": "Quick Start Guide", "anchor": "#getting-started", "doc": "getting-started" },
+        { "title": "Installation", "anchor": "#installation", "doc": "getting-started" },
+        { "title": "Basic Concepts", "anchor": "#basic-concepts", "doc": "getting-started" }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "collapsed": true,
+      "items": [
+        { "title": "Authentication", "anchor": "#authentication", "doc": "api-reference" },
+        { "title": "Models", "anchor": "#models", "doc": "api-reference" },
+        { "title": "Inference", "anchor": "#inference", "doc": "api-reference" },
+        { "title": "Training", "anchor": "#training", "doc": "api-reference" }
+      ]
+    },
+    {
+      "title": "Inference Acceleration",
+      "collapsed": true,
+      "items": [
+        { "title": "Overview", "anchor": "#overview", "doc": "inference" },
+        { "title": "Optimization", "anchor": "#optimization-techniques", "doc": "inference" },
+        { "title": "Deployment", "anchor": "#hardware-specific-optimization", "doc": "inference" }
+      ]
+    },
+    {
+      "title": "Training Acceleration",
+      "collapsed": true,
+      "items": [
+        { "title": "Distributed Training", "anchor": "#distributed-training", "doc": "training" },
+        { "title": "Mixed Precision", "anchor": "#mixed-precision-training", "doc": "training" },
+        { "title": "Performance Tuning", "anchor": "#performance-optimization", "doc": "training" }
+      ]
+    },
+    {
+      "title": "Tutorials",
+      "collapsed": true,
+      "items": [
+        { "title": "Getting Started Tutorials", "anchor": "#getting-started-tutorials", "doc": "tutorials" },
+        { "title": "Computer Vision", "anchor": "#computer-vision-tutorials", "doc": "tutorials" },
+        { "title": "Natural Language Processing", "anchor": "#natural-language-processing-tutorials", "doc": "tutorials" }
+      ]
+    },
+    {
+      "title": "SDK References",
+      "collapsed": true,
+      "items": [
+        { "title": "Python SDK", "anchor": "#python-sdk", "doc": "sdk" },
+        { "title": "JavaScript SDK", "anchor": "#javascript-sdk", "doc": "sdk" },
+        { "title": "REST API", "anchor": "#rest-api", "doc": "sdk" }
+      ]
+    }
+  ]
+}
+

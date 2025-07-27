@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>ACE3LLM - LLM Optimization</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/databricks-style.css">
+    <link rel="stylesheet" href="css/image-layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="gradient-bg"></div>
+    </div>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="ACE3 Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <span>Product</span>
+                </div>
+                <a href="pricing.html">Pricing</a>
+                <a href="docs.html">Docs</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <a href="login.html" class="login-btn">Log in</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1><span class="highlight">ACE3</span>LLM</h1>
+                <p class="subtitle">Advanced LLM Optimization for Production Environments</p>
+            </div>
+        </section>
+
+        <section class="product-overview">
+            <div class="container">
+                <div class="overview-header">
+                    <h2>Maximize LLM Performance</h2>
+                    <p>ACE3LLM is a specialized toolkit designed to optimize large language model inference, delivering faster responses and higher throughput while reducing computational costs.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3>KV Cache Optimization</h3>
+                        <p>Advanced key-value cache management for efficient token generation.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <line x1="20" y1="8" x2="20" y2="14"></line>
+                                <line x1="23" y1="11" x2="17" y2="11"></line>
+                            </svg>
+                        </div>
+                        <h3>Multi-Query Attention</h3>
+                        <p>Optimized attention mechanisms for handling multiple queries simultaneously.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Continuous Batching</h3>
+                        <p>Dynamic request handling for maximum GPU utilization and throughput.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </div>
+                        <h3>Quantization Support</h3>
+                        <p>INT8, INT4, and mixed precision support with minimal accuracy loss.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="technical-details">
+            <div class="container">
+                <h2>Technical Capabilities</h2>
+                
+                <div class="tech-tabs">
+                    <div class="tab active" data-tab="models">Supported Models</div>
+                    <div class="tab" data-tab="performance">Performance Gains</div>
+                    <div class="tab" data-tab="integration">Integration</div>
+                </div>
+                
+                <div class="tab-content active" id="models">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Wide Model Support</h3>
+                            <p>ACE3LLM optimizes inference for a variety of popular LLM architectures:</p>
+                            <ul>
+                                <li><strong>Transformer-based Models</strong> - LLaMA, Mistral, Falcon, MPT</li>
+                                <li><strong>Mixture-of-Experts</strong> - Mixtral, DeepSeek-MoE, Grok</li>
+                                <li><strong>Encoder-Decoder</strong> - T5, BART, Flan-T5</li>
+                                <li><strong>Multimodal Models</strong> - LLaVA, CLIP, CogVLM</li>
+                                <li><strong>Custom Architectures</strong> - Support for proprietary model architectures</li>
+                            </ul>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Model Architecture Diagram</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="performance">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Measurable Performance Improvements</h3>
+                            <p>ACE3LLM delivers significant performance gains across various metrics:</p>
+                            <ul>
+                                <li><strong>Throughput</strong> - Up to 3x higher tokens per second</li>
+                                <li><strong>Latency</strong> - Up to 60% reduction in first token latency</li>
+                                <li><strong>Memory Usage</strong> - Up to 40% reduction in GPU memory requirements</li>
+                                <li><strong>Cost Efficiency</strong> - Up to 65% reduction in inference costs</li>
+                                <li><strong>Scaling</strong> - Near-linear scaling with additional hardware</li>
+                            </ul>
+                            <p>These improvements are achieved through a combination of algorithmic optimizations, memory management techniques, and hardware-specific tuning.</p>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Performance Comparison Chart</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="integration">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Seamless Integration</h3>
+                            <p>ACE3LLM integrates easily with your existing LLM infrastructure:</p>
+                            <ul>
+                                <li><strong>API Compatibility</strong> - Drop-in replacement for popular LLM serving APIs</li>
+                                <li><strong>Framework Support</strong> - Works with PyTorch, Hugging Face Transformers, and vLLM</li>
+                                <li><strong>Deployment Options</strong> - Docker containers, Kubernetes, cloud services</li>
+                                <li><strong>Monitoring</strong> - Prometheus metrics, logging, and performance analytics</li>
+                                <li><strong>Scaling</strong> - Horizontal and vertical scaling capabilities</li>
+                            </ul>
+                            <p>Our Python and REST APIs make it easy to incorporate ACE3LLM into your existing ML pipeline with minimal code changes.</p>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Integration Architecture Diagram</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="use-cases">
+            <div class="container">
+                <h2>Use Cases</h2>
+                
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Chatbots & Assistants</h3>
+                        <p>Deliver responsive conversational AI with lower latency and higher throughput, improving user experience while reducing costs.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Content Generation</h3>
+                        <p>Generate articles, summaries, and creative content faster with optimized token generation and memory management.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3>Enterprise Applications</h3>
+                        <p>Deploy LLMs for internal tools, knowledge bases, and customer support with reduced infrastructure requirements.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                                <line x1="16" y1="8" x2="2" y2="22"></line>
+                                <line x1="17.5" y1="15" x2="9" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Edge Deployment</h3>
+                        <p>Run optimized LLMs on edge devices with limited resources through advanced quantization and pruning techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to optimize your LLM infrastructure?</h2>
+                <p>Get started with ACE3LLM today and experience the difference in performance and cost efficiency.</p>
+                <div class="cta-buttons">
+                    <a href="docs.html" class="cta-button primary">View Documentation</a>
+                    <a href="pricing.html" class="cta-button secondary">See Pricing</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.svg" alt="ACE3 Logo">
+                <p>Accelerate AI to Benefit Humanity</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Pages</h3>
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="github.html">Github</a>
+                    <a href="docs.html">Docs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <a href="onediff.html">OneDiff</a>
+                    <a href="ace3llm.html">ACE3LLM</a>
+                    <a href="ace3cloud.html">ACE3Cloud</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                    <a href="status.html">Status</a>
+                    <a href="github.html">Github</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <a href="agreement.html">Agreement</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="report.html">Report Channel</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script>
+        // Tab functionality for technical details
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

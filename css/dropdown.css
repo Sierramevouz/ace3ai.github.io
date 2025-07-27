@@ -1,0 +1,81 @@
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown span {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown span::after {
+    content: "▼";
+    font-size: 8px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.dropdown:hover span::after {
+    color: var(--primary-color);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 280px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    padding: 8px 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
+/* 产品下拉菜单特殊样式 */
+.product-info {
+    display: block;
+}
+
+.product-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.product-description {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    line-height: 1.3;
+}

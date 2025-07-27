@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>OneDiff - Image Generation Acceleration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/databricks-style.css">
+    <link rel="stylesheet" href="css/image-layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="gradient-bg"></div>
+    </div>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="ACE3 Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <span>Product</span>
+                </div>
+                <a href="pricing.html">Pricing</a>
+                <a href="docs.html">Docs</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <a href="login.html" class="login-btn">Log in</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1><span class="highlight">One</span>Diff</h1>
+                <p class="subtitle">Accelerated Image Generation for Diffusion Models</p>
+            </div>
+        </section>
+
+        <section class="product-overview">
+            <div class="container">
+                <div class="overview-header">
+                    <h2>Supercharge Your Image Generation</h2>
+                    <p>OneDiff is a high-performance acceleration library for diffusion models, delivering up to 3x faster image generation while maintaining quality and compatibility with popular frameworks.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="2" x2="12" y2="6"></line>
+                                <line x1="12" y1="18" x2="12" y2="22"></line>
+                                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                <line x1="2" y1="12" x2="6" y2="12"></line>
+                                <line x1="18" y1="12" x2="22" y2="12"></line>
+                                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                            </svg>
+                        </div>
+                        <h3>Optimized Kernels</h3>
+                        <p>Custom CUDA kernels designed specifically for diffusion model operations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                        </div>
+                        <h3>Drop-in Integration</h3>
+                        <p>Seamless compatibility with Diffusers, ComfyUI, and Stable Diffusion WebUI.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3>Memory Optimization</h3>
+                        <p>Reduced VRAM usage allowing for larger batch sizes and higher resolutions.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Full Feature Support</h3>
+                        <p>Compatible with ControlNet, LoRA, textual inversion, and other advanced techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="technical-details">
+            <div class="container">
+                <h2>Technical Capabilities</h2>
+                
+                <div class="tech-tabs">
+                    <div class="tab active" data-tab="performance">Performance</div>
+                    <div class="tab" data-tab="compatibility">Compatibility</div>
+                    <div class="tab" data-tab="features">Advanced Features</div>
+                </div>
+                
+                <div class="tab-content active" id="performance">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Breakthrough Performance</h3>
+                            <p>OneDiff delivers exceptional performance improvements across various scenarios:</p>
+                            <ul>
+                                <li><strong>Up to 3x faster</strong> image generation for standard Stable Diffusion models</li>
+                                <li><strong>Up to 2.5x faster</strong> for SDXL and other large models</li>
+                                <li><strong>Up to 40% reduction</strong> in VRAM usage</li>
+                                <li><strong>Batch processing</strong> with near-linear scaling</li>
+                                <li><strong>Optimized for</strong> NVIDIA RTX 30/40 series and A100/H100 GPUs</li>
+                            </ul>
+                            <p>These improvements are achieved through a combination of kernel fusion, memory layout optimization, and algorithm refinements specifically designed for diffusion model workloads.</p>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Performance Benchmark Chart</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="compatibility">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Wide Framework Compatibility</h3>
+                            <p>OneDiff integrates seamlessly with popular diffusion frameworks and tools:</p>
+                            <ul>
+                                <li><strong>Hugging Face Diffusers</strong> - Direct API compatibility</li>
+                                <li><strong>ComfyUI</strong> - Custom nodes for easy integration</li>
+                                <li><strong>Stable Diffusion WebUI</strong> - Extension available</li>
+                                <li><strong>PyTorch</strong> - Native PyTorch operator support</li>
+                                <li><strong>ONNX Runtime</strong> - Export capabilities for deployment</li>
+                            </ul>
+                            <p>Our Python API makes it easy to incorporate OneDiff into your existing image generation pipeline with minimal code changes.</p>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Framework Integration Diagram</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="features">
+                    <div class="tab-content-inner">
+                        <div class="tab-text">
+                            <h3>Advanced Feature Support</h3>
+                            <p>OneDiff supports the full range of modern diffusion model techniques:</p>
+                            <ul>
+                                <li><strong>ControlNet</strong> - All condition types supported with optimized performance</li>
+                                <li><strong>LoRA & LyCORIS</strong> - Full compatibility with model fine-tuning techniques</li>
+                                <li><strong>Textual Inversion</strong> - Support for custom embeddings and concepts</li>
+                                <li><strong>CLIP Skip</strong> - Configurable CLIP text encoder layers</li>
+                                <li><strong>Sampling Methods</strong> - All major samplers including DPM++, Euler a, DDIM, and more</li>
+                                <li><strong>Upscalers</strong> - Compatible with various upscaling techniques</li>
+                                <li><strong>Img2Img</strong> - Optimized image-to-image generation</li>
+                                <li><strong>Inpainting</strong> - Full support for masked generation</li>
+                            </ul>
+                        </div>
+                        <div class="tab-image">
+                            <div class="placeholder-image">Feature Compatibility Matrix</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="use-cases">
+            <div class="container">
+                <h2>Use Cases</h2>
+                
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Content Creation</h3>
+                        <p>Generate images faster for creative workflows, enabling real-time feedback and iteration for artists and designers.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Batch Processing</h3>
+                        <p>Process large volumes of images efficiently for dataset generation, product visualization, and content libraries.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3>Interactive Applications</h3>
+                        <p>Build responsive AI image generation applications with lower latency and higher throughput for better user experience.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Multi-User Services</h3>
+                        <p>Serve more users with the same hardware resources, reducing costs and improving scalability for image generation services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to accelerate your image generation?</h2>
+                <p>Get started with OneDiff today and experience the difference in speed and efficiency.</p>
+                <div class="cta-buttons">
+                    <a href="docs.html" class="cta-button primary">View Documentation</a>
+                    <a href="pricing.html" class="cta-button secondary">See Pricing</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.svg" alt="ACE3 Logo">
+                <p>Accelerate AI to Benefit Humanity</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Pages</h3>
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="github.html">Github</a>
+                    <a href="docs.html">Docs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <a href="onediff.html">OneDiff</a>
+                    <a href="ace3llm.html">ACE3LLM</a>
+                    <a href="ace3cloud.html">ACE3Cloud</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                    <a href="status.html">Status</a>
+                    <a href="github.html">Github</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <a href="agreement.html">Agreement</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="report.html">Report Channel</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script>
+        // Tab functionality for technical details
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

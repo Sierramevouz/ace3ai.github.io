@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ACE3 AI Platform</title>
+    <link rel="stylesheet" href="css/databricks-framework.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="background: white; border-bottom: 1px solid #E2E8F0;">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-logo">ACE3</a>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="user-info" style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="user-avatar" src="" alt="User Avatar" style="width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid #E2E8F0;">
+                    <span id="user-name" style="font-weight: 500; color: #1A202C;"></span>
+                </div>
+                <button id="logout-btn" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">
+                    <i class="fas fa-sign-out-alt" style="margin-right: 0.5rem;"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container" style="display: flex; min-height: calc(100vh - 80px);">
+        
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" style="width: 250px; background: #F7FAFC; border-right: 1px solid #E2E8F0; padding: 2rem 0;">
+            <nav class="sidebar-nav" style="padding: 0 1rem;">
+                <ul style="list-style: none; margin: 0; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#overview" class="sidebar-link active" data-section="overview" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-chart-pie" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            Overview
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#api-keys" class="sidebar-link" data-section="api-keys" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-key" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            API Keys
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#usage" class="sidebar-link" data-section="usage" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-chart-bar" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            Usage Analytics
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#models" class="sidebar-link" data-section="models" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-brain" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            Models
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#billing" class="sidebar-link" data-section="billing" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-credit-card" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            Billing
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <a href="#settings" class="sidebar-link" data-section="settings" style="display: flex; align-items: center; padding: 0.75rem 1rem; border-radius: 0.5rem; text-decoration: none; color: #4A5568; transition: all 0.3s;">
+                            <i class="fas fa-cog" style="margin-right: 0.75rem; width: 1rem;"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main" style="flex: 1; padding: 2rem;">
+            
+            <!-- Overview Section -->
+            <section id="overview-section" class="dashboard-section">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">Dashboard Overview</h1>
+                    <p style="color: #4A5568;">Monitor your AI acceleration usage and performance metrics</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                            <h3 style="color: #4A5568; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">API Calls</h3>
+                            <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #FF6B35, #FF8A65); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-bolt" style="color: white; font-size: 1rem;"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;" id="api-calls-count">1,247</div>
+                        <div style="color: #48BB78; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-arrow-up" style="margin-right: 0.25rem;"></i>
+                            +12% from last month
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                            <h3 style="color: #4A5568; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Tokens Used</h3>
+                            <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #4299E1, #63B3ED); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-database" style="color: white; font-size: 1rem;"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;" id="tokens-used">2.4M</div>
+                        <div style="color: #48BB78; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-arrow-up" style="margin-right: 0.25rem;"></i>
+                            +8% from last month
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                            <h3 style="color: #4A5568; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Avg Response Time</h3>
+                            <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #48BB78, #68D391); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-clock" style="color: white; font-size: 1rem;"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;" id="avg-response-time">127ms</div>
+                        <div style="color: #48BB78; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-arrow-down" style="margin-right: 0.25rem;"></i>
+                            -15% from last month
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                            <h3 style="color: #4A5568; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Success Rate</h3>
+                            <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #9F7AEA, #B794F6); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-check-circle" style="color: white; font-size: 1rem;"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;" id="success-rate">99.8%</div>
+                        <div style="color: #48BB78; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-arrow-up" style="margin-right: 0.25rem;"></i>
+                            +0.2% from last month
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <div class="chart-container" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">API Usage Over Time</h3>
+                        <canvas id="usage-chart" style="max-height: 300px;"></canvas>
+                    </div>
+
+                    <div class="chart-container" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">Model Usage</h3>
+                        <canvas id="model-chart" style="max-height: 300px;"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Keys Section -->
+            <section id="api-keys-section" class="dashboard-section" style="display: none;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">API Keys</h1>
+                    <p style="color: #4A5568;">Manage your API keys for accessing ACE3 services</p>
+                </div>
+
+                <div class="api-key-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: #1A202C;">Your API Key</h3>
+                        <button id="regenerate-key-btn" class="btn btn-outline" style="font-size: 0.875rem;">
+                            <i class="fas fa-sync-alt" style="margin-right: 0.5rem;"></i>
+                            Regenerate
+                        </button>
+                    </div>
+
+                    <div class="api-key-display" style="background: #F7FAFC; padding: 1rem; border-radius: 0.5rem; border: 1px solid #E2E8F0; margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <code id="api-key-value" style="font-family: 'Monaco', 'Menlo', monospace; color: #2D3748; font-size: 0.875rem;">Loading...</code>
+                            <button id="copy-key-btn" class="btn btn-outline" style="padding: 0.5rem; font-size: 0.75rem;">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div style="background: #FFF5F5; border: 1px solid #FED7D7; border-radius: 0.5rem; padding: 1rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <i class="fas fa-exclamation-triangle" style="color: #E53E3E; margin-right: 0.5rem;"></i>
+                            <strong style="color: #E53E3E; font-size: 0.875rem;">Important</strong>
+                        </div>
+                        <p style="color: #C53030; font-size: 0.875rem; margin: 0;">Keep your API key secure and never share it publicly. If you suspect it has been compromised, regenerate it immediately.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Analytics Section -->
+            <section id="usage-section" class="dashboard-section" style="display: none;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">Usage Analytics</h1>
+                    <p style="color: #4A5568;">Detailed analytics of your API usage and performance</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">Recent API Calls</h3>
+                    <div class="usage-table" style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid #E2E8F0;">
+                                    <th style="text-align: left; padding: 0.75rem; color: #4A5568; font-weight: 600; font-size: 0.875rem;">Timestamp</th>
+                                    <th style="text-align: left; padding: 0.75rem; color: #4A5568; font-weight: 600; font-size: 0.875rem;">Endpoint</th>
+                                    <th style="text-align: left; padding: 0.75rem; color: #4A5568; font-weight: 600; font-size: 0.875rem;">Tokens</th>
+                                    <th style="text-align: left; padding: 0.75rem; color: #4A5568; font-weight: 600; font-size: 0.875rem;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usage-table-body">
+                                <!-- Table rows will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Models Section -->
+            <section id="models-section" class="dashboard-section" style="display: none;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">Available Models</h1>
+                    <p style="color: #4A5568;">Explore and manage your AI models</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div class="model-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #1A202C; margin-bottom: 0.5rem;">ACE3 Inference v1.0</h3>
+                        <p style="color: #4A5568; font-size: 0.875rem; margin-bottom: 1rem;">High-performance inference model optimized for real-time applications</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="background: #C6F6D5; color: #2F855A; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">Active</span>
+                            <button class="btn btn-primary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Use Model</button>
+                        </div>
+                    </div>
+
+                    <div class="model-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #1A202C; margin-bottom: 0.5rem;">ACE3 Training v1.0</h3>
+                        <p style="color: #4A5568; font-size: 0.875rem; margin-bottom: 1rem;">Advanced training acceleration for custom model development</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="background: #C6F6D5; color: #2F855A; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">Active</span>
+                            <button class="btn btn-primary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Use Model</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Billing Section -->
+            <section id="billing-section" class="dashboard-section" style="display: none;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">Billing & Subscription</h1>
+                    <p style="color: #4A5568;">Manage your subscription and billing information</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">Current Plan</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: #FF6B35; margin-bottom: 0.5rem;">Professional Plan</div>
+                            <div style="color: #4A5568;">Up to 100 GPU hours/month</div>
+                        </div>
+                        <button class="btn btn-outline">Upgrade Plan</button>
+                    </div>
+
+                    <div style="border-top: 1px solid #E2E8F0; padding-top: 1.5rem;">
+                        <h4 style="font-size: 1rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">Usage This Month</h4>
+                        <div style="background: #F7FAFC; padding: 1rem; border-radius: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="color: #4A5568;">GPU Hours Used</span>
+                                <span style="font-weight: 600; color: #1A202C;">47 / 100</span>
+                            </div>
+                            <div style="background: #E2E8F0; height: 0.5rem; border-radius: 0.25rem; overflow: hidden;">
+                                <div style="background: #FF6B35; height: 100%; width: 47%; transition: width 0.3s ease;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="dashboard-section" style="display: none;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h1 style="font-size: 2rem; font-weight: 700; color: #1A202C; margin-bottom: 0.5rem;">Account Settings</h1>
+                    <p style="color: #4A5568;">Manage your account preferences and security settings</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1A202C; margin-bottom: 1rem;">Profile Information</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label style="display: block; font-weight: 500; color: #4A5568; margin-bottom: 0.5rem; font-size: 0.875rem;">Name</label>
+                            <input type="text" id="settings-name" style="width: 100%; padding: 0.75rem; border: 1px solid #E2E8F0; border-radius: 0.5rem; box-sizing: border-box;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 500; color: #4A5568; margin-bottom: 0.5rem; font-size: 0.875rem;">Email</label>
+                            <input type="email" id="settings-email" style="width: 100%; padding: 0.75rem; border: 1px solid #E2E8F0; border-radius: 0.5rem; box-sizing: border-box;" readonly>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 1rem;">Save Changes</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
